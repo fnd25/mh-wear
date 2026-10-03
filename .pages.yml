@@ -1,0 +1,61 @@
+# Configuration du backoffice MH WEAR (Pages CMS — https://app.pagescms.org)
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: produits
+    label: Articles
+    type: file
+    path: public/data/produits.json
+    format: json
+    list: true
+    fields:
+      - name: nom
+        label: Nom de l'article
+        type: string
+        required: true
+      - name: image
+        label: Photo
+        type: image
+        required: true
+      - name: prix
+        label: Prix (ex. 15 000 FCFA)
+        type: string
+        required: true
+      - name: categorie
+        label: Catégorie
+        type: string
+        description: "Ex. T-shirt, Sweat, Pantalon — sert aux filtres en haut du site"
+      - name: tailles
+        label: Tailles disponibles
+        type: string
+        description: "Ex. S · M · L · XL"
+      - name: description
+        label: Description courte
+        type: text
+      - name: nouveau
+        label: Afficher le badge « Nouveau »
+        type: boolean
+      - name: epuise
+        label: Épuisé
+        type: boolean
+        description: "Coché = l'article s'affiche « Épuisé » et le bouton WhatsApp est désactivé"
+
+  - name: site
+    label: Réglages du site
+    type: file
+    path: public/data/site.json
+    format: json
+    fields:
+      - name: whatsapp
+        label: Numéro WhatsApp
+        type: string
+        required: true
+        description: "Format international, sans + ni espaces (ex. 221771234567)"
+        pattern:
+          regex: "^[0-9]{8,15}$"
+          message: "Chiffres uniquement, avec l'indicatif du pays (ex. 221771234567)"
+      - name: slogan
+        label: Slogan sous le titre
+        type: string

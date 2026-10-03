@@ -1,9 +1,0 @@
-{
-  // Nom du projet : doit être EXACTEMENT celui affiché dans Cloudflare (Workers & Pages)
-  "name": "mh-wear",
-  "compatibility_date": "2026-10-01",
-  // Le site statique se trouve dans le dossier public/
-  "assets": {
-    "directory": "./public"
-  }
-}

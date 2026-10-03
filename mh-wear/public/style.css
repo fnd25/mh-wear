@@ -1,0 +1,131 @@
+:root {
+  --noir: #0e0e0e;
+  --blanc: #f6f4ef;
+  --gris: #8a8780;
+  --ligne: #dedad2;
+  --accent: #c8ff3d;
+  --whatsapp: #1fa855;
+  --whatsapp-fonce: #168a45;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--blanc);
+  color: var(--noir);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ---------- Barre du haut ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px;
+  background: rgba(246, 244, 239, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ligne);
+}
+.logo {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.25rem; letter-spacing: .04em; text-decoration: none;
+}
+.topbar-link {
+  font-size: .875rem; font-weight: 600; text-decoration: none;
+  padding: 8px 14px; border-radius: 999px; background: var(--noir); color: var(--blanc);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--noir); color: var(--blanc);
+  padding: 64px 20px 56px; text-align: center; overflow: hidden;
+}
+.hero-kicker {
+  display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--noir); background: var(--accent);
+  padding: 4px 10px; border-radius: 4px; margin-bottom: 18px;
+}
+.hero-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(3.2rem, 15vw, 9rem); line-height: .9; letter-spacing: -.02em;
+}
+.hero-sub { margin-top: 16px; color: #bdbab3; font-size: 1.05rem; }
+
+/* ---------- Filtres ---------- */
+.filters {
+  display: flex; gap: 8px; overflow-x: auto;
+  padding: 20px; max-width: 1200px; margin: 0 auto;
+  scrollbar-width: none;
+}
+.filters::-webkit-scrollbar { display: none; }
+.filters button {
+  flex: none; font: inherit; font-size: .875rem; font-weight: 500;
+  padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--ligne); background: #fff; color: var(--noir);
+}
+.filters button.actif { background: var(--noir); color: var(--blanc); border-color: var(--noir); }
+
+/* ---------- Grille ---------- */
+main { max-width: 1200px; margin: 0 auto; padding: 0 20px 64px; }
+.grid {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.loading, .vide { grid-column: 1 / -1; text-align: center; color: var(--gris); padding: 48px 0; }
+
+.card {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--ligne);
+  display: flex; flex-direction: column;
+}
+.card-img {
+  position: relative; aspect-ratio: 4 / 5; background: #ebe8e1; overflow: hidden;
+}
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card:hover .card-img img { transform: scale(1.04); }
+.badge {
+  position: absolute; top: 12px; left: 12px;
+  font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  padding: 4px 8px; border-radius: 4px; background: var(--accent); color: var(--noir);
+}
+.badge.epuise { background: var(--noir); color: var(--blanc); }
+
+.card-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card-nom { font-weight: 600; font-size: 1rem; }
+.card-desc { font-size: .875rem; color: var(--gris); }
+.card-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 4px 0 12px; }
+.card-prix { font-family: "Archivo Black", sans-serif; font-size: 1.1rem; }
+.card-tailles { font-size: .8rem; color: var(--gris); text-align: right; }
+
+/* ---------- Bouton WhatsApp ---------- */
+.btn-wa {
+  margin-top: auto;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 14px; border-radius: 10px;
+  background: var(--whatsapp); color: #fff;
+  font-weight: 600; font-size: .95rem; text-decoration: none;
+  transition: background .2s ease;
+}
+.btn-wa:hover { background: var(--whatsapp-fonce); }
+.btn-wa svg { width: 20px; height: 20px; flex: none; }
+.btn-wa.desactive { background: #c9c6bf; pointer-events: none; }
+
+/* ---------- Pied de page ---------- */
+.footer {
+  text-align: center; font-size: .8rem; color: var(--gris);
+  padding: 28px 20px; border-top: 1px solid var(--ligne);
+}
+
+@media (max-width: 520px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .card-body { padding: 12px; }
+  .card-meta { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .card-tailles { text-align: left; }
+  .btn-wa { font-size: .85rem; padding: 10px; }
+  .card-desc { display: none; }
+}

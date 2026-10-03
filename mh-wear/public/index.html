@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MH WEAR</title>
+  <meta name="description" content="MH WEAR — vêtements à commander directement sur WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">MH&nbsp;WEAR</a>
+    <a id="contact-top" class="topbar-link" href="#" target="_blank" rel="noopener">Nous écrire</a>
+  </header>
+
+  <section class="hero">
+    <p class="hero-kicker">Nouvelle collection</p>
+    <h1 class="hero-title">MH WEAR</h1>
+    <p id="slogan" class="hero-sub">Le style, sans compromis.</p>
+  </section>
+
+  <nav id="filtres" class="filters" aria-label="Catégories"></nav>
+
+  <main>
+    <div id="grille" class="grid" aria-live="polite">
+      <p class="loading">Chargement des articles…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="annee"></span> MH WEAR · Commandes uniquement via WhatsApp</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

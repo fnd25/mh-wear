@@ -1,0 +1,62 @@
+[
+  {
+    "nom": "T-shirt Oversize Noir",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "10 000 FCFA",
+    "categorie": "T-shirt",
+    "tailles": "S · M · L · XL",
+    "image": "/images/tshirt-noir.svg",
+    "nouveau": true,
+    "epuise": false
+  },
+  {
+    "nom": "Hoodie Essentiel Beige",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "20 000 FCFA",
+    "categorie": "Sweat",
+    "tailles": "S · M · L · XL",
+    "image": "/images/hoodie-beige.svg",
+    "nouveau": true,
+    "epuise": false
+  },
+  {
+    "nom": "Jogging Classique Gris",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "15 000 FCFA",
+    "categorie": "Pantalon",
+    "tailles": "S · M · L · XL",
+    "image": "/images/jogging-gris.svg",
+    "nouveau": false,
+    "epuise": false
+  },
+  {
+    "nom": "T-shirt Logo Blanc",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "10 000 FCFA",
+    "categorie": "T-shirt",
+    "tailles": "S · M · L · XL",
+    "image": "/images/tshirt-blanc.svg",
+    "nouveau": false,
+    "epuise": false
+  },
+  {
+    "nom": "Sweat Col Rond Kaki",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "20 000 FCFA",
+    "categorie": "Sweat",
+    "tailles": "S · M · L · XL",
+    "image": "/images/sweat-vert.svg",
+    "nouveau": false,
+    "epuise": true
+  },
+  {
+    "nom": "Pantalon Cargo Noir",
+    "description": "Coton épais, coupe confortable.",
+    "prix": "15 000 FCFA",
+    "categorie": "Pantalon",
+    "tailles": "S · M · L · XL",
+    "image": "/images/cargo-noir.svg",
+    "nouveau": false,
+    "epuise": false
+  }
+]
